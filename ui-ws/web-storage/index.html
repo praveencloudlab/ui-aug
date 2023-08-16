@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Storage</title>
+</head>
+<body>
+
+    <h1>Web Storage Demo_</h1> <hr/> <br/>
+
+    <p>
+        <label>Key: </label>
+        <input type="text" id="key" placeholder="Enter a key"/> 
+    </p>
+    <p>
+        <label>Value: </label>
+        <input type="text" id="value" placeholder="Enter Value"/> 
+    </p>
+    <button onclick="storeLocal()">Store in Local Storage</button>
+    <button onclick="storeSession()">Store in Session Storage</button>
+    <button onclick="retrieveData()">Retrieve Data</button>
+
+
+    <hr/>
+    <p id="display" style="font-weight: bolder;"></p>
+
+    <script>
+        function storeLocal() {
+           //let key= document.getElementById("key");
+           let key=document.querySelector("#key").value;
+           let value=document.querySelector("#value").value;
+
+           localStorage.setItem(key,value);
+           document.getElementById('display').innerText="Stored in Local Storage"  
+        }
+
+        function storeSession() {
+           //let key= document.getElementById("key");
+           let key=document.querySelector("#key").value;
+           let value=document.querySelector("#value").value;
+
+           sessionStorage.setItem(key,value);
+           document.getElementById('display').innerText="Stored in Session Storage"  
+        }
+
+        // function to retrieve stored data from local storage
+        function retrieveData() {
+            let key=document.querySelector('#key').value;
+            let localValue=localStorage.getItem(key);
+            let sessionValue=sessionStorage.getItem(key);
+
+            let message=`Local storage: ${localValue} | Session Storage: ${sessionValue}`;
+            document.getElementById('display').innerText=message;
+        }
+    </script>
+    
+</body>
+</html>

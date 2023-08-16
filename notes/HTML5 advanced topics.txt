@@ -1,0 +1,35 @@
+HTML5 advanced topics
+=============================
+1.Web Storage
+	localolStorage
+	sessionStorage
+2.Web works : Allows running java script in the background, in a separate  thread without effecting the performance of the web page
+3.WebSockets
+4.Canvas
+	2D Api
+	WebGL
+5.Drag and Drop (d&d) api: 
+6.Geolocation
+7.File API
+	FileReader
+	Blob
+8.Media Elements
+	<audio> and <video>
+9.Form Enhancements
+	date,number,range,color,email .. etc
+10.History API
+	Offline applications
+	Serviceworkers
+	Push notifications
+	WebRTC(web Real-time communication)
+
+
+Web Storage
+===============
+
+
+
+
+
+
+

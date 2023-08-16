@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>HTML5 Form Enhancements Demo</h2> <hr/> <br/>
+
+    <form action="#" method="post">
+        <!-- New Input Types -->
+        <div>
+            <input type="email" placeholder="example@example.com" required>
+        </div>
+
+        <div>
+            <input type="password" pattern=".{6,}" placeholder="provide password" title="Minimum 6 characters" required>
+        </div>
+        <div>
+            <label for="">Happiness (1 to 100)</label>
+            <input type="range" id="range" min="1" max="100"/>
+            <span id="rangeValue">50</span>
+        </div>
+        <div>
+            <input type="date" id="date" required>
+        </div>
+
+        <div>
+            <label for="Age">Age</label>
+            <input type="number" id="number" required>
+        </div>
+
+        <input type="submit" value="submit"/>
+    </form>
+
+    </form>
+
+    <script>
+        // display range value
+        document.getElementById('range').addEventListener('input',(e)=>{
+            document.getElementById('rangeValue').innerText=e.target.value;
+        })
+    </script>
+
+
+</body>
+</html>
