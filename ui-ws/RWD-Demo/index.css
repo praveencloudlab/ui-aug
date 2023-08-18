@@ -1,0 +1,20 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-column, .right-column{
+    width: 45%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/*@Media Query for screen smaller than 768 */
+@media(max-width:768px){
+    .container{
+        flex-direction: column;
+    }
+    .left-column,.right-column{
+        width: 100%;
+    }
+}
